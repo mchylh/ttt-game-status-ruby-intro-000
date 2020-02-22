@@ -18,17 +18,20 @@ WIN_COMBINATIONS = [
 [6,4,2] # right_diagonal
 ]
 
-#who won?
+#winning combo 
 def won?(board)
- WIN_COMBINATIONS.each do |win_combination|
-   win_index_1 = win_combination[0]
-   win_index_2 = win_combination[1]
-   win_index_3 = win_combination[2]
-   position_1 = board[win_index_1] # value of board at win_index_1
-   position_2 = board[win_index_2] # value of board at win_index_2
-   position_3 = board[win_index_3] # value of board at win_index_3
-   position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index_1)
- end
+    WIN_COMBINATIONS.each do |win_combination|
+      win_index_1 = win_combination[0]
+      win_index_2 = win_combination[1]
+      win_index_3 = win_combination[2]
+      position_1 = board[win_index_1] # value of board at win_index_1
+      position_2 = board[win_index_2] # value of board at win_index_2
+      position_3 = board[win_index_3] # value of board at win_index_3
+      if position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index_1)
+        return win_combination
+      end
+    end
+    return false
 end
 #position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index_1)
 #The above code means to return first element (position_1) & make sure the position is taken by X or O
