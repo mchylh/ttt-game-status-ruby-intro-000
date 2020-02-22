@@ -18,7 +18,6 @@ WIN_COMBINATIONS = [
 [6,4,2] # right_diagonal
 ]
 
-
 #who won?
 def won?(board)
  WIN_COMBINATIONS.each do |win_combination|
