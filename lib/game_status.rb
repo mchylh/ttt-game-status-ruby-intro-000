@@ -5,6 +5,8 @@ end
 
 # Define your WIN_COMBINATIONS constant
 #WIN_COMBINATIONS is a constant but it’s the parent array to our the children array.
+#parent_array => WIN_COMBINATIONS = [ children_arrays ]
+#children_arrays => [0,1,2],[3,4,5],[6,7,8]...[6,4,2]
 WIN_COMBINATIONS = [
 [0,1,2], # top_row
 [3,4,5], # middle_row
@@ -16,9 +18,6 @@ WIN_COMBINATIONS = [
 [6,4,2] # right_diagonal
 ]
 
-#children array
-parent_array => WIN_COMBINATIONS = [ children_arrays ]
-children_arrays => [0,1,2],[3,4,5],[6,7,8]...[6,4,2]
 
 #who won?
 def won?(board)
