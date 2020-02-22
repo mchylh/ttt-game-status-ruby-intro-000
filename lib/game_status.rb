@@ -18,4 +18,4 @@ WIN_COMBINATIONS = [
 
 #children array
 parent_array => WIN_COMBINATIONS = [ children_arrays ]
-children_arrays => [0,1,2],[3,4,5],[6,7,8]...[6,4,2] 
+children_arrays => [0,1,2],[3,4,5],[6,7,8]...[6,4,2]
