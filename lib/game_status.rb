@@ -18,7 +18,7 @@ WIN_COMBINATIONS = [
 [6,4,2] # right_diagonal
 ]
 
-#winning combo 
+#winning combo
 def won?(board)
     WIN_COMBINATIONS.each do |win_combination|
       win_index_1 = win_combination[0]
